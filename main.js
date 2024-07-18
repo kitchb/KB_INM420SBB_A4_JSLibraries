@@ -23,6 +23,31 @@
     });
 }());
 
+// GLIDE
+(function () {
+    function customFunction(event) {
+        console.log('Glide.js event:', event);
+    }
+
+    const carousel = new Glide('.glide', {
+        type: 'carousel',
+        autoplay: 4000,
+        gap: 24,
+        peek: 300,
+        perView: 1,
+    });
+
+    carousel.on('mount.after', function () {
+        customFunction('mount.after');
+    });
+
+    carousel.on('run.after', function () {
+        customFunction('run.after');
+    });
+
+    carousel.mount();
+})();
+
 // LIGHTBOX JS
 /*!
  * jQuery JavaScript Library v3.6.3

@@ -10,6 +10,9 @@
 
     <!-- EXTERNAL CSS -->
     <link href="style.css" rel="stylesheet" />
+
+    <!-- GLIDE -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@glidejs/glide/dist/css/glide.core.min.css">
 </head>
 
 <body>
@@ -22,22 +25,42 @@
         <section id="banner">
             <h1 class="f1 b">Explore our exclusive range of premium furniture and enjoy unmatched comfort.</h1>
         </section>
-        <section id="title">
+        <section id="brand">
             <p>MOUVE</p>
+            <ul id="quicklinks">
+                <a href="#featuredP">FEATURED PRODUCTS</a>
+                <a href="#summerC">SUMMER COLLECTION</a>
+            </ul>
         </section>
     </div>
-    <div id="products">
-        <p id="pTitle">SUMMER COLLECTION</p>
-        <ul>
+    <div id="featuredP">
+        <div class="glide">
+            <p id="featured" class="sectitle">FEATURED PRODUCTS</p>
+            <div class="glide__track" data-glide-el="track">
+                <ul class="glide__slides">
+                    <li class="glide__slide"><img src="assets/img/product12.jpg"></li>
+                    <li class="glide__slide"><img src="assets/img/product13.jpg"></li>
+                    <li class="glide__slide"><img src="assets/img/product14.jpg"></li>
+                    <li class="glide__slide"><img src="assets/img/product3.webp"></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div id="summerC">
+        <p id="summer" class="sectitle">SUMMER COLLECTION</p>
+        <ul class="lightboxLinks">
             <a href="assets/img/product4.jpeg" data-lightbox="roadtrip">Product 4</a>
             <a href="assets/img/product5.jpeg" data-lightbox="roadtrip">Product 5</a>
             <a href="assets/img/product6.jpeg" data-lightbox="roadtrip">Product 6</a>
         </ul>
-
     </div>
 
 
 
+
+
+    <!-- GLIDE.JS -->
+    <script src="https://cdn.jsdelivr.net/npm/@glidejs/glide"></script>
     <!-- BIDEO JS -->
     <script src="https://cdn.jsdelivr.net/npm/bideo.js"></script>
     <!-- EXTERNAL JS -->
