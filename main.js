@@ -86,6 +86,20 @@
     carousel.mount();
 })();
 
+// POPPER
+document.addEventListener('DOMContentLoaded', function() {
+    var referenceElement = document.getElementById("hello-world");
+    var instance = new Tooltip(referenceElement, {
+      title: referenceElement.getAttribute('data-tooltip'),
+      trigger: "hover",
+      placement: "top",
+    });
+    // instance.show();
+    // instance.hide();
+    // instance.toggle();
+    // instance.dispose()
+    // instance.updateTitleContent("update title")
+  });
 
 // LIGHTBOX JS
 /*!
