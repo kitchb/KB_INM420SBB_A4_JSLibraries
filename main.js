@@ -87,15 +87,6 @@
 })();
 
 // POPPER
-// document.addEventListener('DOMContentLoaded', function() {
-//     var referenceElement = document.getElementById("hello-world");
-//     var instance = new Tooltip(referenceElement, {
-//       title: referenceElement.getAttribute('data-tooltip'),
-//       trigger: "hover",
-//       placement: "top",
-//     });
-//   });
-
 document.addEventListener('DOMContentLoaded', function() {
     // Function to initialize tooltip
     function initializeTooltip(elementId) {
