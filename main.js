@@ -87,19 +87,33 @@
 })();
 
 // POPPER
+// document.addEventListener('DOMContentLoaded', function() {
+//     var referenceElement = document.getElementById("hello-world");
+//     var instance = new Tooltip(referenceElement, {
+//       title: referenceElement.getAttribute('data-tooltip'),
+//       trigger: "hover",
+//       placement: "top",
+//     });
+//   });
+
 document.addEventListener('DOMContentLoaded', function() {
-    var referenceElement = document.getElementById("hello-world");
-    var instance = new Tooltip(referenceElement, {
-      title: referenceElement.getAttribute('data-tooltip'),
-      trigger: "hover",
-      placement: "top",
-    });
-    // instance.show();
-    // instance.hide();
-    // instance.toggle();
-    // instance.dispose()
-    // instance.updateTitleContent("update title")
-  });
+    // Function to initialize tooltip
+    function initializeTooltip(elementId) {
+        var referenceElement = document.getElementById(elementId);
+        if (referenceElement) {
+            new Tooltip(referenceElement, {
+                title: referenceElement.getAttribute('data-tooltip'),
+                trigger: "hover",
+                placement: "top",
+            });
+        }
+    }
+
+    // Initialize tooltips for each button
+    initializeTooltip("set");
+    initializeTooltip("tabletop");
+    initializeTooltip("chair");
+});
 
 // LIGHTBOX JS
 /*!
