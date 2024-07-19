@@ -31,10 +31,48 @@
 
     const carousel = new Glide('.glide', {
         type: 'carousel',
-        autoplay: 4000,
-        gap: 24,
-        peek: 300,
-        perView: 1,
+        autoplay: 3000,
+        gap: 20,
+        peek: window.innerWidth <= 575 ? 0 : 300,
+        perView: window.innerWidth <= 575 ? 1 : 1.5,
+        breakpoints: {
+            575: {
+                perView: 1,
+                peek: 0
+            },
+            768: {
+                perView: 1.5,
+                peek: 50
+            },
+            1024: {
+                perView: 1,
+                peek: 300
+            }
+        }
+    });
+
+    window.addEventListener('resize', function () {
+        carousel.update({
+            type: 'carousel',
+            autoplay: 3000,
+            gap: 20,
+            peek: window.innerWidth <= 575 ? 0 : 300,
+            perView: window.innerWidth <= 575 ? 1 : 1.5,
+            breakpoints: {
+                575: {
+                    perView: 1,
+                    peek: 0
+                },
+                768: {
+                    perView: 1.5,
+                    peek: 50
+                },
+                1024: {
+                    perView: 1,
+                    peek: 300
+                }
+            }
+        });
     });
 
     carousel.on('mount.after', function () {
@@ -47,6 +85,7 @@
 
     carousel.mount();
 })();
+
 
 // LIGHTBOX JS
 /*!
