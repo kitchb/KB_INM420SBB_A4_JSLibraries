@@ -115,6 +115,26 @@ document.addEventListener('DOMContentLoaded', function() {
     initializeTooltip("chair");
 });
 
+// LEAFLET MAP
+var map = L.map('map', {
+    center: [43.6426, -79.3871],
+    zoom: 14
+});
+
+var tiles = new L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
+  minZoom: '15'}).addTo(map);
+
+var marker = L.marker(
+    [43.6426, -79.3871],
+{ 
+    draggable: true,
+    title: "",
+    opacity: 0.75
+});
+
+marker.addTo(map).bindPopup("<p1><b>The Mouve Studio</b><br>Downtown Toronto, ON, Canada <br> Operating Hours: Mon-Sat 10:00AM - 5:00PM</p1>") .openPopup();
+
 // LIGHTBOX JS
 /*!
  * jQuery JavaScript Library v3.6.3

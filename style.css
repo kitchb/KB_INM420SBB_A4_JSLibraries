@@ -114,7 +114,7 @@ body {
     text-align: center;
 }
 
-#featured {
+#featured, #store {
     color: rgb(43, 71, 53);
 }
 
@@ -522,7 +522,13 @@ button{
   margin-bottom: 0;
 }
 
-
+/* LEAFLET MAP */
+#store{
+    text-align: center;
+}
+#map { 
+    height: 400px; 
+}
 
 /* MIDPOINT */
 /* TABLETS */

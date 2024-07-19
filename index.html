@@ -23,11 +23,16 @@
     <!-- GLIDE -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@glidejs/glide/dist/css/glide.core.min.css">
 
+    <!-- LEAFLET -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+    integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+    crossorigin=""/>
 
 </head>
 
 <body>
     <div id="herocontainer">
+        <!--BIDEO -->
         <section id="herovideo">
             <video id="background_video" loop muted></video>
             <div id="video_cover"></div>
@@ -45,6 +50,7 @@
             </ul>
         </section>
     </div>
+    <!-- GLIDE -->
     <div id="featuredP">
         <div class="glide">
             <p id="featured" class="sectitle">FEATURED PRODUCTS</p>
@@ -61,6 +67,7 @@
     <div id="summerC">
         <p id="summer" class="sectitle">SUMMER COLLECTION</p>
         <p id="collection"> The Tranquil <br> Terrace</p>
+        <!-- LIGHTBOX -->
         <section id="summersec">
             <p id="items"> Collection Items </p>
             <ul class="lightboxLinks">
@@ -69,10 +76,17 @@
                 <a href="assets/img/product6.jpeg" data-lightbox="roadtrip">The Rest</a>
             </ul>
         </section>
+        <!-- POPPER -->
         <button id="set" class="popperbuttons" data-tooltip="CAD 5200">The Veranda Vista Set</button>
         <button id="tabletop" class="popperbuttons" data-tooltip="CAD 3200 per piece">The Vista Tabletop</button>
         <button id="chair" class="popperbuttons" data-tooltip="CAD 240 per piece">The Vista Chair</button>
     </div>
+    <!-- LEAFLET -->
+    <div> 
+        <p id="store" class="sectitle">STORE</p>
+        <div id="map">TEST</div>
+    </div>
+
 
     <!-- GLIDE.JS -->
     <script src="https://cdn.jsdelivr.net/npm/@glidejs/glide"></script>
@@ -81,6 +95,10 @@
     <!-- POPPER -->
     <script src="https://unpkg.com/popper.js/dist/umd/popper.min.js"></script>
     <script src="https://unpkg.com/tooltip.js/dist/umd/tooltip.min.js"></script>
+    <!-- LEAFLET -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+    integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+    crossorigin=""></script>
     <!-- EXTERNAL JS -->
     <script src="main.js"></script>
 
